@@ -1,0 +1,57 @@
+# TASK 1:
+names_list = []
+programs_list = []
+
+noOfNames = int(input("Element included in the names_list are: "))
+
+for i in range(noOfNames):
+    names = input("Enter the student names: ")
+    names_list.append(names)
+
+noOfPrograms = int(input("Element included in the Programs_list are: "))
+
+for i in range(noOfPrograms):
+    programs = input("enter the program names: ")
+    programs_list.append(programs)
+
+merge_list = names_list + programs_list
+print("the merged list is: " , merge_list)
+merge_list.sort()
+print("the sorted merge list is: " , merge_list)
+
+# TASK 2:
+smallest = min(merge_list)
+largest = max(merge_list)
+print("the smallest element (no.of characters) of the merged list is: ", smallest)
+print("the largest element (no.of characters) of the merged list is: ", largest)
+
+# TASK 3:
+friends_dict = {
+    "shahzeb" : "24-08-2003", "abdul-haq" : "11-4-2004", "zain" : "22-4-2003"
+}
+for names in friends_dict:
+
+     print(names)
+
+names = input("enter the name you want to see the birth day for: ")
+
+if names in friends_dict:
+    print(f"{names}'s birthday is {friends_dict[names]}")
+
+else:
+    print(f"the birthday of {names}'s is not stored in the dictionary.")
+
+# TASK 4:
+info_dict = {"name": "shahzeb", "age": "22", "Bsc": "SE", "job": "Software developer" }
+        
+keyToExtract = ["name", "job"]
+new_Dict = {}
+
+for key in keyToExtract:
+    if key in info_dict:
+        new_Dict[key] = info_dict[key]
+
+print("the new dictionary is: " , new_Dict)
+
+
+
